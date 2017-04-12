@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Photo Gallery - TechDegree</title>
+    <meta name="author" content="DavidPaul Sullivan">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/photoswipe.css" rel="stylesheet">
+    <link rel="stylesheet" href="images/default-skin/default-skin.css">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/media-query.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+
+    <script src="https://use.fontawesome.com/a702fc9918.js"></script>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="gallery-container">
+            <input type="text" id="search" name="search_caption" placeholder="Search photos here">
+
+            <ul class="gallery-list">
+                <li>
+                    <a href="images/01.jpg " data-size="814x510">
+                        <img src="images/thumbnails/01.jpg"
+                         alt="I love hay bales. Took this snap on a drive through the countryside past some straw fields.">
+                    </a>
+                    <div class="overlay">
+                        <div><i class="fa fa-search-plus" aria-hidden="true"></i></div>
+                    </div>
+
+                </li>
+                <li>
+                    <a href="images/02.jpg" data-size="814x510">
+                        <img src="images/thumbnails/02.jpg"
+                         alt="The lake was so calm today. We had a great view of the snow on the mountains from here.">
+                    </a>
+                    <div class="overlay">
+                        <div><i class="fa fa-search-plus" aria-hidden="true"></i></div>
+                    </div>
+                </li>
+                <li>
+                    <a href="images/03.jpg"  data-size="814x510">
+                        <img src="images/thumbnails/03.jpg"
+                         alt="I hiked to the top of the mountain and got this picture of the canyon and trees below.">
+                    </a>
+                    <div class="overlay">
+                        <div><i class="fa fa-search-plus" aria-hidden="true"></i></div>
+                    </div>
+
+                </li>
+                <li>
+                    <a href="images/04.jpg"  data-size="814x510">
+                        <img src="images/thumbnails/04.jpg"
+                         alt="It was amazing to see an iceberg up close, it was so cold but didn’t snow today. ">
+                    </a>
+                    <div class="overlay">
+                        <div><i class="fa fa-search-plus" aria-hidden="true"></i></div>
+                    </div>
+
+                </li>
+                <li>
+                    <a href="images/05.jpg"  data-size="814x510">
+                        <img src="images/thumbnails/05.jpg"
+                         alt="The red cliffs were beautiful. It was really hot in the desert but we did a lot of walking through the canyons.">
+                    </a>
+                    <div class="overlay">
+                        <div><i class="fa fa-search-plus" aria-hidden="true"></i></div>
+                    </div>
+                </li>
+                <li>
+                    <a href="images/06.jpg"  data-size="814x510">
+                        <img src="images/thumbnails/06.jpg"
+                         alt="Fall is coming, I love when the leaves on the trees start to change color.">
+                    </a>
+                    <div class="overlay">
+                        <div><i class="fa fa-search-plus" aria-hidden="true"></i></div>
+                    </div>
+
+                </li>
+                <li>
+                    <a href="images/07.jpg"  data-size="814x510">
+                        <img src="images/thumbnails/07.jpg"
+                         alt="I drove past this plantation yesterday, everything is so green!">
+                    </a>
+                    <div class="overlay">
+                        <div><i class="fa fa-search-plus" aria-hidden="true"></i></div>
+                    </div>
+                </li>
+                <li>
+                    <a href="images/08.jpg"  data-size="814x510">
+                        <img src="images/thumbnails/08.jpg"
+                         alt="My summer vacation to the Oregon Coast. I love the sandy dunes!">
+                    </a>
+                    <div class="overlay">
+                        <div><i class="fa fa-search-plus" aria-hidden="true"></i></div>
+                    </div>
+                </li>
+                <li>
+                    <a href="images/09.jpg"  data-size="814x510">
+                        <img src="images/thumbnails/09.jpg"
+                         alt="We enjoyed a quiet stroll down this countryside lane. ">
+                    </a>
+                    <div class="overlay">
+                        <div><i class="fa fa-search-plus" aria-hidden="true"></i></div>
+                    </div>
+                </li>
+                <li>
+                    <a href="images/10.jpg"  data-size="814x510">
+                        <img src="images/thumbnails/10.jpg"
+                         alt="Sunset at the coast! The sky turned a lovely shade of orange.">
+                    </a>
+                    <div class="overlay">
+                        <div><i class="fa fa-search-plus" aria-hidden="true"></i></div>
+                    </div>
+
+                </li>
+                <li>
+                    <a href="images/11.jpg"  data-size="814x510">
+                        <img src="images/thumbnails/11.jpg"
+                         alt="I did a tour of a cave today and the view of the landscape below was breathtaking.">
+                    </a>
+                    <div class="overlay">
+                        <div><i class="fa fa-search-plus" aria-hidden="true"></i></div>
+                    </div>
+
+                </li>
+                <li>
+                    <a href="images/12.jpg" data-size="814x510">
+                        <img src="images/thumbnails/12.jpg"
+                         alt="I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in.">
+                    </a>
+                    <div class="overlay">
+                        <div><i class="fa fa-search-plus" aria-hidden="true"></i></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+        <div class="pswp__bg"></div>
+
+        <!-- Slides wrapper with overflow:hidden. -->
+        <div class="pswp__scroll-wrap">
+
+            <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+            <div class="pswp__ui pswp__ui--hidden">
+
+                <div class="pswp__top-bar">
+
+                    <!--  Controls are self-explanatory. Order can be changed. -->
+
+                    <div class="pswp__counter"></div>
+
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                   
+                    <!-- element will get class pswp__preloader--active when preloader is running -->
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                </button>
+
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                </button>
+
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- HTML Template for Photoswipe Plugin, required to add HTML to bottom of page or inject dynamically with JS -->
+
+    <script
+            src="https://code.jquery.com/jquery-3.2.0.min.js"
+            integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I="
+            crossorigin="anonymous"></script>
+    <script src="js/photoswipe.min.js"></script>
+    <script src="js/photoswipe-ui-default.min.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>
