@@ -79,6 +79,7 @@ i:hover, a:hover {
 .gallery-list {
     padding: 0 20px;
     margin-top: 2rem;
+    text-align: center;
 }
 
 .gallery-list > li {
